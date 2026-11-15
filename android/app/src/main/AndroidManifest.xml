@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 주행 화면의 실제 지도(OpenStreetMap 타일)와 경로 탐색을 받아 온다. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Vehicle SDK: 기어 위치 (Gear.registerGearSelection) -->
+    <uses-permission android:name="pleos.car.permission.CAR_DRIVE" />
+    <!-- NaviHelper SDK: 목적지, 도착, 경로 위 정체 구간 -->
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE" />
+    <!-- NaviHelper SDK: 목적지 안내 요청 (requestRoute) -->
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE_SEARCH" />
+    <!-- NaviHelper SDK: 경로 옵션 변경 (커피 운송작전의 편안한 길) -->
+    <uses-permission android:name="pleos.car.permission.NAVI_CUSTOM_ROUTE" />
+    <!-- NaviHelper SDK: 다음 회전, 주의 지점 같은 부가 정보 -->
+    <uses-permission android:name="pleos.car.permission.NAVI_CUSTOM_ETC" />
+    <!-- TextToSpeech SDK: 주행 중 감자 음성 안내 -->
+    <uses-permission android:name="pleos.car.permission.TTS_SERVICE" />
+    <!--
+        SpeechToText SDK: 말로 묻기. 주차 중(기어 P)에 커피 운송작전의 컵을 묻고 대답을 한 번 듣는다.
+        마이크는 Pleos 음성 서비스가 열므로 RECORD_AUDIO 는 쓰지 않는다.
+    -->
+    <uses-permission android:name="pleos.car.permission.STT_SERVICE" />
+    <!-- Android Automotive 차량 속성: 차량 속도 (PERF_VEHICLE_SPEED). 지도 위의 차를 계기판과 같은 속도로 움직인다. -->
+    <uses-permission android:name="android.car.permission.CAR_SPEED" />
+
+    <uses-feature
+        android:name="android.hardware.type.automotive"
+        android:required="false" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GamjaHq">
+
+        <!-- 차량 속성 API (android.car). 없는 기기에서도 설치되도록 필수로 두지 않는다. -->
+        <uses-library
+            android:name="android.car"
+            android:required="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|uiMode"
+            android:exported="true">
+            <!--
+                주행 중에도 화면에 남을 수 있다고 선언한다. 선언하지 않으면 기어가 P 를 벗어나는 순간
+                시스템이 "주행 중에는 사용할 수 없습니다"로 앱을 가린다.
+                주행 화면에는 주행 지도, 안내 카드, 컵, 감자의 한 줄 문장이 나온다. 움직이는 것은 차의 상태를 따르는 지도와 컵뿐이고, 누를 수 있는 것은 위쪽 띠의 시연용 "시험 값" 단추뿐이다.
+            -->
+            <meta-data
+                android:name="distractionOptimized"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
