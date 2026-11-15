@@ -1,0 +1,25 @@
+node_modules/
+dist/
+draft-sample/
+*.log
+.gstack/
+
+# 로컬 전용 설정과 API 키. 저장소에 넣지 않는다.
+.env.local
+.env.*.local
+
+# 공공데이터포털에서 받은 원본 파일. 가공한 결과만 저장소에 넣는다.
+data/raw/
+
+# 만든 영상. 용량이 커서 저장소에 넣지 않는다.
+video/
+android/.kotlin/
+
+# 접수양식·메일 초안 (개인정보와 서명을 적는 파일)
+submission/
+
+# 영상 작업에서 잠깐 만드는 임시 테스트 폴더
+web/src/__tmp_*/
+
+# 파이썬이 스크립트를 불러올 때 만드는 캐시
+__pycache__/
