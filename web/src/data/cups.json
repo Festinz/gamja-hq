@@ -1,0 +1,102 @@
+{
+  "source": "컵 용량은 브랜드 공식 홈페이지 메뉴·영양정보의 컵용량/제공량을 2026-11-15에 확인했다(스타벅스·투썸·이디야·메가·컴포즈·빽다방·할리스·탐앤탐스·폴바셋·파스쿠찌·달콤). 커피빈·엔제리너스·카페베네는 언론 보도의 기본 크기(더팩트, 뉴데일리 2016-07-21), 드롭탑은 공개 자료가 없어 흔한 12·16oz 컵으로 어림했다. 컵 모양은 Dart Solo 종이컵(378W·412WN·316W·420W) 유통사 규격과 Pactiv Evergreen(Fabri-Kal) Greenware 콜드컵 규격표(GC1214·GC16T·GC16S·GC20·GC24·GC32T)의 바깥 치수다. 매장마다 실제 컵은 조금씩 다르므로 모든 물리 수치는 어림이다. approx가 true인 크기는 공식 수치가 아니라 어림이다.",
+  "checked": "2026-11-15",
+  "fill": {"headspaceMm":10,"note":"음료 윗면(아이스는 얼음 포함)은 테두리에서 약 1cm 아래로 둔다. 매장은 뚜껑과 흔들림을 위해 테두리 아래를 비우고, 콜드컵은 \"12/14oz\"처럼 실용 채움과 가득 채움을 함께 표기한다. shapes의 치수는 제조사 바깥 치수라 안쪽은 지름이 4~6mm, 깊이가 3~7mm(종이컵 바닥 홈) 작다."},
+  "lid": {"spillFactor":0.05,"note":"cup.ts LID_LEAK와 같은 값이다. 뚜껑을 닫으면 넘친 커피는 마시는 구멍(폭 약 1~1.2cm)으로만 나온다. 그 폭이 모형의 둑 폭(컵 반지름, 약 4cm)에서 차지하는 몫 약 0.3에, 둘레 가운데 그 구멍이 수면이 솟는 쪽에 놓일 몫 약 0.2를 곱해 0.05로 잡았다(어림, 실험값이 아니다). 빨대 꽂은 아이스 뚜껑이나 실링 필름은 이보다 덜 샐 수 있다. 참고: 캐나다 The Province(2018-06-22)가 네 체인의 뚜껑 덮은 컵을 실험실에서 험한 길처럼 흔든 시험에서 잃은 양은 내용물의 약 0.2~1%였다(열린 컵 비교 없음)."},
+  "generic": [
+    {"id":"small","label":"작은 컵","volumeMl":355},
+    {"id":"medium","label":"중간 컵","volumeMl":473},
+    {"id":"large","label":"큰 컵","volumeMl":591}
+  ],
+  "shapes": {
+    "hot": [
+      {"maxMl":260,"oz":8,"nominalMl":237,"topDiameterMm":79,"bottomDiameterMm":51,"heightMm":95,"spec":"Dart Solo 378W-2050 종이컵, 3⅛×2×3¾ in"},
+      {"maxMl":400,"oz":12,"nominalMl":355,"topDiameterMm":89,"bottomDiameterMm":58,"heightMm":112,"spec":"Dart Solo 412WN-2050 종이컵, 3.5×2.3×4.4 in"},
+      {"maxMl":490,"oz":16,"nominalMl":473,"topDiameterMm":89,"bottomDiameterMm":58,"heightMm":135,"spec":"Dart Solo 316W-2050 종이컵, 3.5×2.3×5.3 in"},
+      {"maxMl":600,"oz":20,"nominalMl":591,"topDiameterMm":90,"bottomDiameterMm":64,"heightMm":149,"spec":"Dart Solo 420W-2050 종이컵, 3 9/16×2.5×5 7/8 in"},
+      {"maxMl":700,"oz":22,"nominalMl":650,"topDiameterMm":90,"bottomDiameterMm":60,"heightMm":172,"approx":true,"spec":"외삽: 20oz 테두리(같은 Solo Traveler 뚜껑이 10~24oz 컵에 맞음)에 높이만 늘림"}
+    ],
+    "ice": [
+      {"maxMl":400,"oz":12,"nominalMl":355,"topDiameterMm":91,"bottomDiameterMm":58,"heightMm":107,"spec":"Greenware GC1214 콜드컵(12/14oz), 3.6×2.3×4.2 in"},
+      {"maxMl":490,"oz":16,"nominalMl":473,"topDiameterMm":99,"bottomDiameterMm":61,"heightMm":114,"spec":"Greenware GC16T 콜드컵, 3.9×2.4×4.5 in"},
+      {"maxMl":540,"oz":18,"nominalMl":532,"topDiameterMm":99,"bottomDiameterMm":64,"heightMm":119,"spec":"Greenware GC16S 콜드컵(16/18oz), 3.9×2.5×4.7 in"},
+      {"maxMl":600,"oz":20,"nominalMl":591,"topDiameterMm":99,"bottomDiameterMm":61,"heightMm":137,"spec":"Greenware GC20 콜드컵, 3.9×2.4×5.4 in"},
+      {"maxMl":720,"oz":24,"nominalMl":710,"topDiameterMm":99,"bottomDiameterMm":64,"heightMm":152,"spec":"Greenware GC24 콜드컵, 3.9×2.5×6.0 in"},
+      {"maxMl":1000,"oz":32,"nominalMl":946,"topDiameterMm":107,"bottomDiameterMm":66,"heightMm":175,"spec":"Greenware GC32T 콜드컵, 4.2×2.6×6.9 in"}
+    ]
+  },
+  "brands": [
+    {"id":"starbucks","name":"스타벅스","aliases":["스타벅스","스벅","별다방","스타벅스커피","starbucks"],"source":"https://www.starbucks.co.kr/menu/drink_view.do 사이즈 표(Short 237, Tall 355, Grande 473, Venti 591, Trenta 887ml)","sizes":[
+      {"id":"short","name":"숏","aliases":["숏","short","숏사이즈"],"hotMl":237,"iceMl":null},
+      {"id":"tall","name":"톨","aliases":["톨","tall","톨사이즈"],"hotMl":355,"iceMl":355},
+      {"id":"grande","name":"그란데","aliases":["그란데","그랑데","grande","그란데사이즈"],"hotMl":473,"iceMl":473},
+      {"id":"venti","name":"벤티","aliases":["벤티","venti","벤티사이즈","큰 거","큰거"],"hotMl":591,"iceMl":591},
+      {"id":"trenta","name":"트렌타","aliases":["트렌타","trenta","트렌타사이즈"],"hotMl":null,"iceMl":887,"note":"일부 아이스 음료만"}
+    ]},
+    {"id":"mega","name":"메가커피","aliases":["메가커피","메가엠지씨커피","메가MGC커피","메가 커피","메가","mega","mgc"],"source":"https://www.mega-mgccoffee.com/menu/ 컵용량(아메리카노 HOT 591, ICE 710, 메가리카노 946ml)","sizes":[
+      {"id":"regular","name":"기본","aliases":["기본","보통","레귤러"],"hotMl":591,"iceMl":710,"note":"아이스 라떼류는 591ml 컵"},
+      {"id":"megaricano","name":"메가리카노","aliases":["메가리카노","왕메가","메가사이즈","메가 사이즈"],"hotMl":null,"iceMl":946,"note":"아이스만"}
+    ]},
+    {"id":"compose","name":"컴포즈커피","aliases":["컴포즈커피","컴포즈 커피","컴포즈","compose"],"source":"https://composecoffee.com/ 메뉴 상세 컵용량(H·I-아메리카노 591, 빅포즈 946ml)","sizes":[
+      {"id":"regular","name":"기본","aliases":["기본","보통","레귤러"],"hotMl":591,"iceMl":591},
+      {"id":"big","name":"빅포즈","aliases":["빅포즈","빅 포즈"],"hotMl":null,"iceMl":946,"note":"아이스만"}
+    ]},
+    {"id":"paik","name":"빽다방","aliases":["빽다방","백다방","빽다방커피","paik","빽"],"source":"https://paikdabang.com/menu/menu_coffee/ 컵용량(HOT 510, ICED 660, 빽사이즈 990, 스몰 440ml)","sizes":[
+      {"id":"small","name":"스몰","aliases":["스몰","스몰사이즈"],"hotMl":null,"iceMl":440,"note":"일부 아이스 음료만"},
+      {"id":"regular","name":"기본","aliases":["기본","보통","레귤러"],"hotMl":510,"iceMl":660},
+      {"id":"big","name":"빽사이즈","aliases":["빽사이즈","백사이즈","빽 사이즈"],"hotMl":null,"iceMl":990,"note":"아이스만"}
+    ]},
+    {"id":"ediya","name":"이디야커피","aliases":["이디야커피","이디야","이디아","ediya"],"source":"https://www.ediya.com/contents/drink.html 컵용량(L 520, EX HOT 650, EX ICED 670ml), 2025-12-16 크기 개편 뒤","sizes":[
+      {"id":"large","name":"라지","aliases":["라지","엘","기본","보통","레귤러"],"hotMl":520,"iceMl":520,"note":"개편 전 레귤러(14oz)를 대신한 기본 크기"},
+      {"id":"extra","name":"엑스트라","aliases":["엑스트라","엑스트라사이즈","이엑스","ex"],"hotMl":650,"iceMl":670}
+    ]},
+    {"id":"twosome","name":"투썸플레이스","aliases":["투썸플레이스","투썸 플레이스","투썸","투섬","twosome"],"source":"https://mo.twosome.co.kr/mn/menuInfoDetail.do?menuCd=10100001 사이즈별 컵용량(아메리카노)","sizes":[
+      {"id":"regular","name":"레귤러","aliases":["레귤러","기본","보통"],"hotMl":355,"iceMl":414},
+      {"id":"large","name":"라지","aliases":["라지","엘"],"hotMl":473,"iceMl":473},
+      {"id":"max","name":"맥스","aliases":["맥스","max"],"hotMl":null,"iceMl":591,"note":"아이스만"}
+    ]},
+    {"id":"hollys","name":"할리스","aliases":["할리스커피","할리스","홀리스","hollys"],"source":"https://www.hollys.co.kr/menu/espresso.do 1회 제공량(Regular 354, Grande 472, Venti 591ml)","sizes":[
+      {"id":"regular","name":"레귤러","aliases":["레귤러","기본","보통"],"hotMl":354,"iceMl":354},
+      {"id":"grande","name":"그란데","aliases":["그란데","그랑데","grande"],"hotMl":472,"iceMl":472},
+      {"id":"venti","name":"벤티","aliases":["벤티","venti"],"hotMl":591,"iceMl":591}
+    ]},
+    {"id":"tomntoms","name":"탐앤탐스","aliases":["탐앤탐스","탐엔탐스","탐탐","tomntoms","tom n toms"],"source":"https://www.tomntoms.com/menu/drink 1회 제공량(아메리카노 310, 아이스 410ml), 더팩트 보도(톨 355ml)","sizes":[
+      {"id":"tall","name":"톨","aliases":["톨","tall","기본","보통"],"hotMl":355,"iceMl":414,"approx":true,"note":"아이스 컵은 제공량 410ml로 어림"},
+      {"id":"grande","name":"그란데","aliases":["그란데","그랑데","grande"],"hotMl":473,"iceMl":473,"approx":true},
+      {"id":"venti","name":"벤티","aliases":["벤티","venti"],"hotMl":591,"iceMl":591,"approx":true}
+    ]},
+    {"id":"paulbassett","name":"폴바셋","aliases":["폴바셋","폴 바셋","폴바세","paul bassett"],"source":"https://www.baristapaulbassett.co.kr/menu/View.pb 제공량(Standard 360, Grand 460, 아이스 아메리카노 Venti 710ml)","sizes":[
+      {"id":"standard","name":"스탠다드","aliases":["스탠다드","스탠더드","standard","기본","보통"],"hotMl":360,"iceMl":360},
+      {"id":"grand","name":"그랜드","aliases":["그랜드","그랑데","그란데","그랑","grand"],"hotMl":460,"iceMl":460},
+      {"id":"venti","name":"벤티","aliases":["벤티","venti"],"hotMl":null,"iceMl":710,"note":"아이스 아메리카노만"}
+    ]},
+    {"id":"coffeebean","name":"커피빈","aliases":["커피빈","커피 빈","coffee bean","coffeebean"],"source":"더팩트 보도(스몰 355ml) https://news.tf.co.kr/read/ogmeta/1937302.htm, 레귤러·라지는 16·20oz로 어림","sizes":[
+      {"id":"small","name":"스몰","aliases":["스몰","small","기본"],"hotMl":355,"iceMl":355,"approx":true,"note":"언론 보도 수치"},
+      {"id":"regular","name":"레귤러","aliases":["레귤러","regular"],"hotMl":473,"iceMl":473,"approx":true},
+      {"id":"large","name":"라지","aliases":["라지","large"],"hotMl":591,"iceMl":591,"approx":true}
+    ]},
+    {"id":"pascucci","name":"파스쿠찌","aliases":["파스쿠찌","파스쿠치","카페 파스쿠찌","pascucci"],"source":"https://www.pascucci.co.kr/ 제품 상세(Regular 385, Large 473ml, Venti 총 내용량 580g)","sizes":[
+      {"id":"regular","name":"레귤러","aliases":["레귤러","기본","보통"],"hotMl":385,"iceMl":385},
+      {"id":"large","name":"라지","aliases":["라지"],"hotMl":473,"iceMl":473},
+      {"id":"venti","name":"벤티","aliases":["벤티","venti"],"hotMl":null,"iceMl":591,"approx":true,"note":"아이스만, 총 내용량 580g으로 어림"}
+    ]},
+    {"id":"angelinus","name":"엔제리너스","aliases":["엔제리너스","엔젤리너스","엔제리너스커피","angelinus","angel-in-us"],"source":"뉴데일리 2016-07-21(스몰 12, 레귤러 16, 라지 20oz), 더팩트 보도(스몰 355ml)","sizes":[
+      {"id":"small","name":"스몰","aliases":["스몰","small","기본"],"hotMl":355,"iceMl":355,"approx":true,"note":"언론 보도 수치"},
+      {"id":"regular","name":"레귤러","aliases":["레귤러","regular"],"hotMl":473,"iceMl":473,"approx":true},
+      {"id":"large","name":"라지","aliases":["라지","large"],"hotMl":591,"iceMl":591,"approx":true}
+    ]},
+    {"id":"droptop","name":"드롭탑","aliases":["드롭탑","드랍탑","카페드롭탑","카페 드롭탑","droptop"],"source":"공개된 용량 자료 없음. 흔한 12·16oz 컵으로 어림","sizes":[
+      {"id":"regular","name":"레귤러","aliases":["레귤러","기본","보통"],"hotMl":355,"iceMl":355,"approx":true},
+      {"id":"large","name":"라지","aliases":["라지"],"hotMl":473,"iceMl":473,"approx":true}
+    ]},
+    {"id":"dalkomm","name":"달콤커피","aliases":["달콤커피","달콤 커피","dalkomm"],"source":"https://www.dalkomm.com/menu?dalMenu=3 영양성분 제공량(Regular 355, Large 473, K 650ml)","sizes":[
+      {"id":"regular","name":"레귤러","aliases":["레귤러","기본","보통"],"hotMl":355,"iceMl":355},
+      {"id":"large","name":"라지","aliases":["라지"],"hotMl":473,"iceMl":473},
+      {"id":"k","name":"코끼리","aliases":["코끼리","코끼리사이즈"],"hotMl":650,"iceMl":650}
+    ]},
+    {"id":"caffebene","name":"카페베네","aliases":["카페베네","카페 베네","베네","caffebene"],"source":"더팩트 보도(레귤러 360ml), 라지는 16oz로 어림","sizes":[
+      {"id":"regular","name":"레귤러","aliases":["레귤러","기본","보통"],"hotMl":360,"iceMl":360,"approx":true,"note":"언론 보도 수치"},
+      {"id":"large","name":"라지","aliases":["라지"],"hotMl":473,"iceMl":473,"approx":true}
+    ]}
+  ]
+}

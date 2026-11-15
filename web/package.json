@@ -1,0 +1,35 @@
+{
+  "name": "gamja-hq",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:public": "node scripts/build-public.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@astryxdesign/cli": "^0.7.16",
+    "@astryxdesign/core": "^0.7.16",
+    "@astryxdesign/theme-neutral": "^0.7.16",
+    "@fontsource-variable/asta-sans": "^5.3.0",
+    "@heroicons/react": "^2.2.0",
+    "@stylexjs/stylex": "^0.19.1",
+    "maplibre-gl": "^6.18.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@stylexjs/unplugin": "^0.19.1",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.6",
+    "vitest": "^4.0.0"
+  }
+}

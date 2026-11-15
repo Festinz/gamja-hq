@@ -1,0 +1,50 @@
+{
+  "name": "hq",
+  "like": "neutral",
+  "mode": "both",
+  "settings": [
+    {
+      "thing": "accent",
+      "value": "#002C5F",
+      "source": "dial"
+    },
+    {
+      "thing": "neutral",
+      "value": "#E4DCD3",
+      "source": "dial"
+    },
+    {
+      "thing": "corners",
+      "value": "medium",
+      "source": "dial"
+    },
+    {
+      "thing": "font",
+      "value": "\"Asta Sans Variable\", \"Asta Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+      "source": "dial"
+    },
+    {
+      "thing": "--color-accent",
+      "value": "#00AAD2",
+      "source": "token",
+      "mode": "dark"
+    },
+    {
+      "thing": "--size-element-sm",
+      "value": "2rem",
+      "source": "token"
+    },
+    {
+      "thing": "--size-element-md",
+      "value": "2.5rem",
+      "source": "token"
+    },
+    {
+      "thing": "--size-element-lg",
+      "value": "3rem",
+      "source": "token"
+    }
+  ],
+  "lifted": [],
+  "palette": "33be3e059845276b1eaa679a6c88abdd73d2e3f4dfc83a0163837e98bf20ea5f"
+}
